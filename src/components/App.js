@@ -14,16 +14,10 @@ const App = () => {
 			<CategoryFilter cat={CATEGORIES} />
 			<NewTaskForm />
 			<TaskList tasks={TASKS} />
-      {/* // First, we'll want to display all the tasks in our app. Pass down the task data from App to TaskList, and display each task using the Task component. Make sure to use a key prop! */}
 		</div>
 )}
 
 export default App
-
-// Task
-// Update the Task component so that it shows the task's text and category.
-
-// When the delete button is clicked, the task should be removed from the list.
 
 // CategoryFilter
 // Pass the list of categories to this component from App. Then, update this component to display <button> elements for each category. In order to pass the test, the buttons will need a key prop equal to the category.
