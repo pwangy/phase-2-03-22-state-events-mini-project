@@ -1,7 +1,5 @@
 const Task = ({ text, category }) => {
-  const handleDelete = e => {
-    e.target.parentNode.remove()
-  }
+  const handleDelete = e => e.target.parentNode.remove()
 
 	return (
 		<div className='task'>
