@@ -32,6 +32,10 @@ h5 {
   padding-top: 0.25rem;
 }
 
+#row {
+  display: inline;
+}
+
 .categories button {
   border-radius: 0;
   background: #c3c3c3;
@@ -71,7 +75,7 @@ h5 {
   border-radius: 0.5rem;
   border: grey solid 0.1rem;
   border-top: none;
-  padding: 0 1rem;
+  padding: 1rem 1rem 0 1rem;
   padding-bottom: 1rem;
   border-radius: 0 0 0.5rem 0.5rem;
 }
@@ -125,6 +129,7 @@ h5 {
 }
 
 .new-task-form {
+  padding: 7px 18px;
   border: solid #8989ff 0.1rem;
   display: flex;
   align-items: flex-end;

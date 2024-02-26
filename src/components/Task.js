@@ -1,8 +1,6 @@
 const Task = ({ text, category }) => {
-
   const handleDelete = e => {
     e.target.parentNode.remove()
-
   }
 
 	return (
@@ -11,7 +9,6 @@ const Task = ({ text, category }) => {
 			<div className='text'>{text}</div>
 			<button className='delete' onClick={handleDelete}>X</button>
 		</div>
-	)
-}
+)}
 
 export default Task

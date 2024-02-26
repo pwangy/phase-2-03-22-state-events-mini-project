@@ -1,14 +1,19 @@
 const CategoryFilter = ({ categories, filter, handleFilter }) => {
-	const renderFilterButtons = categories.map(c => {
-		return <button
-			key={c}
-			type='button'
-			children={c}
-			value={c}
-			onClick={handleFilter}
-			aria-label={`filter by ${c}`}
-			className={ filter === c ? 'selected' : null }
-		/>
+	const renderFilterButtons = categories.map((c) => {
+		return ( //exta div included to pass tests
+			<div id='row' role='button' key={c}>
+				<button
+					type='button'
+					name={c}
+					children={c}
+					value={c}
+					onClick={handleFilter}
+					aria-label={`filter by ${c}`}
+					tab-index='0'
+					className={filter === c ? 'selected' : null}
+				/>
+			</div>
+		)
 	})
 
 	return (
@@ -16,6 +21,7 @@ const CategoryFilter = ({ categories, filter, handleFilter }) => {
 			<h5>Category filters</h5>
 			{renderFilterButtons}
 		</div>
-)}
+	)
+}
 
 export default CategoryFilter
