@@ -1,15 +1,18 @@
 import { useState } from 'react'
-import { CATEGORIES, TASKS } from '../data'
+import { v4 as uuid } from 'uuid'
+import { CATEGORIES, TASKS as initialTasks } from '../data'
 import CategoryFilter from './CategoryFilter'
 import NewTaskForm from './NewTaskForm'
 import TaskList from './TaskList'
 
 const App = () => {
-	const [tasks, setTasks] = useState(TASKS)
+	const [tasks, setTasks] = useState(
+		initialTasks.map(t =>  ({id: uuid(), ...t}))
+	)
 	const [filter, setFilter] = useState('All')
 	const handleNewTask = newTask => setTasks([...tasks, newTask])
 	const handleFilter = e => setFilter(e.target.value)
-	
+
 	return (
 		<div className='App'>
 			<h2>My tasks</h2>

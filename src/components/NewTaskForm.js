@@ -22,7 +22,6 @@ const NewTaskForm = ({ categories, onTaskFormSubmit }) => {
 
 	const handleSubmit = e => {
 		e.preventDefault()
-		console.log('form submitted!')
 		onTaskFormSubmit({
 			id: uuid(), 
 			...form
